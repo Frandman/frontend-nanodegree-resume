@@ -7,7 +7,8 @@ var bio={
           "mobile": "652849781",
           "email": "frandevelopez@gmail.com" ,
           "github": "frandman",
-          "twitter": "@franjlg", 
+          "twitter": "@franjlg",
+          "blog": "www.franjlopez.es",
           "location": "Madrid"
       },
     "welcomeMessage": "Wellcome to my interactive resume web page",
@@ -97,25 +98,25 @@ var projects={
 
 /* Avoid hacking function */
 
-function avoidHacking(s){
+function avoidHacking(some_string){
 
-	return s.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+	return some_string.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 /* Variable formatting */
 
 var formattedHeaderName = HTMLheaderName.replace("%data%", avoidHacking(bio.name));
-var formattedHeaderRole = HTMLheaderRole.replace("%data%",avoidHacking(bio.role));
+var formattedHeaderRole = HTMLheaderRole.replace("%data%", avoidHacking(bio.role));
 
 var formattedcontactGeneric = HTMLcontactGeneric;
-var formattedmobile = HTMLmobile;
-var formattedemail = HTMLemail;
-var formattedtwitter = HTMLtwitter;
-var formattedgithub = HTMLgithub;
-var formattedblog = HTMLblog;
-var formattedlocation = HTMLlocation;
+var formattedmobile = HTMLmobile.replace("%data%", avoidHacking(bio.contacts.mobile));
+var formattedemail = HTMLemail.replace("%data%", avoidHacking(bio.contacts.email));
+var formattedtwitter = HTMLtwitter.replace("%data%", avoidHacking(bio.contacts.twitter));
+var formattedgithub = HTMLgithub.replace("%data%", avoidHacking(bio.contacts.github));
+var formattedblog = HTMLblog.replace("%data%", avoidHacking(bio.contacts.blog));
+var formattedlocation = HTMLlocation.replace("%data%", avoidHacking(bio.contacts.location));
 
-var formattedbioPic = HTMLbioPic;
+var formattedbioPic = HTMLbioPic.replace("%data%", avoidHacking(bio.biopic));
 var formattedwelcomeMsg = HTMLwelcomeMsg;
 
 var formattedskillsStart = HTMLskillsStart;
@@ -151,4 +152,24 @@ var formattedonlineURL = HTMLonlineURL;
 
 $("#header").prepend(formattedHeaderRole);
 $("#header").prepend(formattedHeaderName);
+$("#header").append(formattedbioPic);
+
+	
+$("#topContacts").append(formattedmobile);
+$("#topContacts").append(formattedemail);
+$("#topContacts").append(formattedtwitter);
+$("#topContacts").append(formattedgithub);
+$("#topContacts").append(formattedblog);
+$("#topContacts").append(formattedlocation);
+
+if(bio.skills){
+
+	$("#header").append(HTMLskillsStart);
+
+	for (skill in bio.skills){
+
+		$("#header").append(HTMLskills.replace("%data%", avoidHacking(bio.skills[skill])));
+
+	}
+}
 
