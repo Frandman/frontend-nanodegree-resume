@@ -63,22 +63,23 @@ var bio={
     "display": "function taking no parameters"
 	};
 
-var education={
+var education= {
 
 	    "schools": [
 	    {
          "name": "Facultad de ciencias Economicas y Empresariales",
          "location": "Sevilla",
-         "degree": "Licenciatura",
-         "majors": ["array", "of", "strings"],
+         "degree": "Master",
+         "majors": ["Bussines Administration"],
+         "minors": ["Financial Accounting", "Audit"],
          "dates": 2009,
          "url": "www.us.es"
      		},
      	{
          "name": "Escuela Universitaria de Estudios Empresariales",
          "location": "Sevilla",
-         "degree": "Diplomado",
-         "majors": ["array", "of", "strings"],
+         "degree": "Bachelor",
+         "majors": ["Bussines Administration"],
          "dates": 2006,
          "url": "www.us.es"
      		}
