@@ -162,7 +162,7 @@ $("#topContacts").append(formattedgithub);
 $("#topContacts").append(formattedblog);
 $("#topContacts").append(formattedlocation);
 
-if(bio.skills){
+if (bio.skills){
 
 	$("#header").append(HTMLskillsStart);
 
@@ -173,3 +173,21 @@ if(bio.skills){
 	}
 }
 
+if (work.jobs) {
+
+    for (job in work.jobs) {
+        $("#workExperience").append(formattedworkStart);
+        var formattedworkTitle = HTMLworkTitle.replace("%data%", avoidHacking(work.jobs[job].title));
+        var formattedworkEmployer = HTMLworkEmployer.replace("%data%", avoidHacking(work.jobs[job].employer));
+        var formattedEmployerTitle = formattedworkEmployer + formattedworkTitle;
+        var formattedworkLocation = HTMLworkLocation.replace("%data%", avoidHacking(work.jobs[job].location))
+        var formattedworkDates = HTMLworkDates.replace("%data%", avoidHacking(work.jobs[job].dates))
+        var formattedworkDescription = HTMLworkDescription.replace("%data%", avoidHacking(work.jobs[job].description))
+        $(".work-entry:last").append(formattedEmployerTitle);
+        $(".work-entry:last").append(formattedworkLocation);
+        $(".work-entry:last").append(formattedworkDates);
+        $(".work-entry:last").append(formattedworkDescription);
+        
+
+    }
+}
