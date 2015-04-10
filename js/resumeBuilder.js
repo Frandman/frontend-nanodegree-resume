@@ -141,5 +141,5 @@ var projects={
 
 /* Filling the content */
 
-$("#header").prepend(formattedHeaderName);
-$("#header").prepend(formattedHeaderRole);
+$("#header").append(formattedHeaderName);
+$("#header").append(formattedHeaderRole);
