@@ -47,7 +47,7 @@ var formattedonlineURL = HTMLonlineURL;
 
 /* Filling the content */
 
-$("#header").append(formattedHeaderName);
-$("#header").append(formattedHeaderRole);
+$("#header").prepend(formattedHeaderName);
+$("#header").prepend(formattedHeaderRole);
 
 
