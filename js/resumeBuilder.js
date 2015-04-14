@@ -14,7 +14,7 @@ var bio={
     "welcomeMessage": "Wellcome to my interactive resume web page Wellcome to my interactive resume web page Wellcome\
                        to my interactive resume web pageWellcome to my interactive resume web page",
     "skills": ["Front End", "Social Media", "Python", "Management"],
-    "biopic": "images/fry.jpg",
+    "biopic": "images/fran.jpg",
     "display": "function taking no parameters"
 };
 
@@ -138,10 +138,11 @@ bio.display = function(){
          && bio.contacts.location
          && bio.skills ) {
 
-        var formattedHeaderName = HTMLheaderName.replace("%data%", avoidHacking(bio.name));
+        var formattedHeaderRole = HTMLheaderRole.replace("%data%", avoidHacking(bio.role));
         $("#header").prepend(formattedHeaderRole);
-        var formattedHeaderRole = HTMLheaderRole.replace("%data%", avoidHacking(bio.name));
+        var formattedHeaderName = HTMLheaderName.replace("%data%", avoidHacking(bio.name));
         $("#header").prepend(formattedHeaderName);
+        
         var formattedbioPic = HTMLbioPic.replace("%data%", avoidHacking(bio.biopic));
         $("#header").append(formattedbioPic);
         var formattedwelcomeMessage = HTMLwelcomeMsg.replace("%data%", avoidHacking(bio.welcomeMessage));
@@ -262,7 +263,7 @@ work.display();
 projects.display();
 education.display();
 
-// $("#main").prepend(internationalizeButton);
+//$("#main").prepend(internationalizeButton);
 
 function inName() {
 
@@ -272,3 +273,8 @@ function inName() {
 }
 
 $("#mapDiv").append(googleMap);
+
+$("#biopic").addClass("img-responsive");
+
+
+

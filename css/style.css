@@ -1,7 +1,8 @@
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  color: rgb(137, 137, 137);
 }
 
 .clearfix {
@@ -15,7 +16,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: rgb(284, 84, 95);
   line-height: 48px;
   display: inline;
 }
@@ -26,6 +27,7 @@ h2 {
   color: #999999;
   line-height: 29px;
   padding: 10px;
+  color: rgb(284, 84, 95);
 }
 
 h3 {
@@ -80,14 +82,15 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
+
   font-size: 18px;
-  color: #F3F3F3;
-  line-height: 28px;
+  color: color: rgb(284, 84, 95);
+  line-height: 20px;
+
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: rgb(284, 84, 95);;
   display: none;
 }
 
@@ -96,27 +99,34 @@ a {
 }
 
 .orange-text {
-  color: #F5AE23;
+  color: #1199C3;
 }
 
 .white-text {
   font-weight: bold;
-  color: #FFFFFF;
+  color: rgb(76,106,141);
 }
 
 .gray {
   background-color: #F3F3F3;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
+  margin: 0% 5% 0% 5%;
 }
 
 .dark-gray {
   background-color: #4A4A4A;
 }
 
+#projects {
+
+  margin: 0% 5% 0% 5%;
+
+}
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  float: right;
+
 }
 
 .flex-box {
@@ -129,10 +139,30 @@ a {
 }
 
 .center-content {
-  padding-top: 2.5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-bottom: 2.5%
+  margin-top: 2.5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 2.5%;
+  padding: 20px;
+}
+
+#skillsH3{
+  text-align: center;
+}
+#skills li.flex-item{
+  width: 100%;
+  padding: 0.5%;
+  text-align: center;
+}
+li.flex-item{
+  width: 25%;
+  padding: 0.5%;
+}
+
+#topContacts{
+
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 ul {
@@ -141,14 +171,15 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
-  width: 200px;
+  width: 100%
   display: none;
+  padding: 0;
 }
 
 img {
   padding: 10px;
 }
+
 
 /* Bar chart stuff */
 .chart div {
@@ -170,13 +201,12 @@ span {
   text-align: center;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (min-width: 1024px) {
   #letsConnect {
     margin-top: 5%;
   }
-}
 
-@media only screen and (max-width:900px) {
+@media only screen and (min-width:751px) and (max-width: 1023px) {
   .biopic {
     width: 175px;
   }
@@ -191,7 +221,14 @@ span {
   }
   .welcome-message {
     display: none;
+    color: color: rgb(137, 137, 137);
   }
+  li.flex-item{
+  width: 50%;
+  padding: 0.5%;
+  color: black;
+}
+
 }
 
 #map {
@@ -212,4 +249,5 @@ span {
   .biopic {
     display: block;
   }
+
 }
