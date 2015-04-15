@@ -1,7 +1,7 @@
 
 $('body').prepend('<script src"js/bootstrap.min.js"></script>');
 $('#main').addClass('container');
-$('#header span:first').replaceWith( '<h4 id="position">'+bio.role+'</h4>' );
+$('#header span:first').replaceWith( '<h2 id="position">'+bio.role+'</h4>' );
 $('#name, #position').wrapAll('<div class="row nameRole"><div class="col-xs-12 col-sm-6 col-sm-offset-6 text-right"></div></div>');
 $('ul').addClass('list-inline');
 $('hr').remove();

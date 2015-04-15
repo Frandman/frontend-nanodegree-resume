@@ -2,7 +2,7 @@
 
 var bio={
 	"name" : "fran lopez",
-    "role" : "Font end Developez",
+    "role" : "Front end Developez",
     "contacts" : {
           "mobile": "666666666",
           "email": "frandevelopez@gmail.com" ,
