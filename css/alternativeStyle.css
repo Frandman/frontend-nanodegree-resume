@@ -4,6 +4,11 @@ body{
 	font: 18px 'Roboto', sans-serif;
 }
 
+a {
+
+	font-size: 20px;
+}
+
 h1 {
 
 	font: 60px Monoton, sans-serif;
@@ -16,75 +21,30 @@ h2, h3 {
 	color: #165388;
 }
 
-a {
+li{
 
-	font-size: 20px;
+	padding: 5px;
+	list-style-type: none;
 }
+	li:hover:nth-child(even){
+
+		background-color: rgba(284, 84, 95, 0.5);
+		transition: .5s ease;
+	}
+	li:hover:nth-child(odd){
+
+		background-color: rgba(41, 145, 234,0.5);
+		transition: .5s ease;
+	}
 
 ul {
 
 	padding-left: 0;
 }
 
-li{
+.blue-text {
 
-	padding: 5px;
-}
-
-#letsConnect h2{
-
-	font: 60px Monoton, sans-serif;
-	color: rgb(284, 84, 95);
-}
-
-li:hover:nth-child(even){
-
-	background-color: rgba(284, 84, 95, 0.5);
-	transition: .5s ease;
-}
-
-li:hover:nth-child(odd){
-
-	background-color: rgba(41, 145, 234,0.5);
-	transition: .5s ease;
-}
-
-
-.row:nth-child(odd){
-
-	border: 1px solid #2991EA;
-	margin: 10px 0 10px 0;
-	padding: 10px;
-}
-.row:nth-child(even){
-
-	border: 1px solid rgb(284, 84, 95);
-	margin: 10px 0 10px 0;
-	padding: 10px;
-}
-
-
-#projects, #education, #letsConnect {
-	border: none;
-}
-.nameRole{
-	
-	text-align: right;
-}
-
-.welcome-message p {
-
-	margin-top: 0;
-}
-
-.location-text{
-
-	margin-top: 15px;
-}
-
-.workEntry p {
-
-margin-top: 0;
+	color: #0B91F2;
 }
 
 .container{
@@ -93,9 +53,59 @@ margin-top: 0;
 	background-repeat: no-repeat;	
 }
 
-#position {
+.gray-text {
+
+	color: #6C6C6C;
+	padding-left: 5px;
+}
+
+.img-responsive {
+	
+    margin: 0 auto;
+}
+
+.location-text{
+
+	margin-top: 15px;
+}
+
+.nameRole{
+	
+	text-align: right;
+}
+
+.row {
+
+	margin: 10px 0 10px 0;
+	padding: 10px;
+
+}
+
+	.row:nth-child(odd){
+
+		border: 1px solid #2991EA;
+
+	}
+
+	.row:nth-child(even){
+
+		border: 1px solid rgb(284, 84, 95);
+	}
+
+
+.welcome-message p, .workEntry p {
 
 	margin-top: 0;
+}
+
+#education, #letsConnect, #projects {
+	border: none;
+}
+
+#letsConnect h2{
+
+	font: 60px Monoton, sans-serif;
+	color: rgb(284, 84, 95);
 }
 
 #name {
@@ -103,14 +113,6 @@ margin-top: 0;
 	margin-bottom: 0;
 }
 
-li{
-	list-style-type: none;
-}
-
-
-.img-responsive {
-    margin: 0 auto;
-}
 #map {
   height: 100%;
 }
@@ -121,21 +123,14 @@ li{
   overflow: auto;
 }
 
+#position {
+
+	margin-top: 0;
+}
+
 #skills{
 
 	padding-right: 0;
-}
-
-.gray-text {
-
-	color: #6C6C6C;
-	padding-left: 5px;
-}
-
-
-.blue-text {
-
-	color: #0B91F2;
 }
 
 @media screen and (max-width: 990px){
@@ -171,9 +166,9 @@ li{
 		background-repeat: no-repeat;
 	}
 
-.container{
+	.container{
 
-	background-image: url('../images/m_background.png');
-	background-repeat: no-repeat;
+		background-image: url('../images/m_background.png');
+		background-repeat: no-repeat;
 
-}
+	}
