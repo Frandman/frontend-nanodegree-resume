@@ -2,7 +2,7 @@
 
 /* Adding Viewport*/
 
-$('body').prepend('<meta name="viewport" content="width=device-width, initial-scale=1.0"');
+$('head').prepend('<meta name="viewport" content="width=device-width, initial-scale=1.0"');
 
 /* Loading jQuery*/
 $('body').prepend('<script src"js/bootstrap.min.js"></script>');
