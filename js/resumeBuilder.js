@@ -11,70 +11,79 @@ var bio={
           "blog": "www.franjlopez.es",
           "location": "Madrid"
       },
-    "welcomeMessage": "Wellcome to my interactive resume web page Wellcome to my interactive resume web page Wellcome\
-                       to my interactive resume web pageWellcome to my interactive resume web page",
-    "skills": ["Front End", "Social Media", "Python", "Management"],
+    "welcomeMessage": "Wellcome to my interactive resume. I'm looking for oportunities as Front-End Developer.\
+                        If you want, you can see my projects on github, and if you like it, give me a call :D\
+                        ",
+    "skills": ["HTML", "CSS", "jQuery", "Python", "Github"],
     "biopic": "images/fran.jpg",
     "display": "function taking no parameters"
 };
 
 var work={
-	    "jobs": [
-         {
+
+    "jobs": [
+
+        {
+        "employer": "Alcampo",
+        "title": "Store manager" ,
+        "location": "Zaragoza", 
+        "dates": "20010-2011",
+        "description": "Store manager at one of the biggest retail companies of Spain" 
+            },
+        {
          "employer": "Alcampo",
-         "title": "Store manager" ,
+         "title": "Account Manager" ,
          "location": "Zaragoza", 
-         "dates": "2006-2009",
-         "description": "Store manager en una de las empresas de distribución más grandes de España" 
+         "dates": "2011-2012",
+         "description": "Account manager for 8 Alcampo stores" 
             },
 	    {
          "employer": "Alcampo",
          "title": "Social Media Manager" ,
          "location": "Madrid", 
-         "dates": "2006-2009",
-         "description": "Social Media manager en una de las empresas de distribución más grandes de España" 
+         "dates": "2013-2015",
+         "description": "Head of Social Media department" 
      		},
      	{
          "employer": "Gastromedia",
          "title": "Social Media Strategist" ,
          "location": "Madrid", 
-         "dates": "2015",
-         "description": "Social media Strategist en una pequeña agencia especializada en Gastronomía" 
+         "dates": 2015,
+         "description": "I think, plan and build, social media strategies for the company clients." 
      		}
-     	],
-    "display": "function taking no parameters"
-
+ 	  ]
 };
 
 var projects={
 
     	"projects": [
+
         {
         	"title": "Interactive Resume",
-            "dates": "2015",
+            "dates": 2015,
             "description": "An awesome interactive resume that displays all relevant information about what i've",
             "images": ["http://placehold.it/300x200","http://placehold.it/300x200"]
         	},
         {
             "title": "Interactive Resume",
-            "dates": "2015",
+            "dates": 2015,
             "description": "An awesome interactive resume that displays all relevant information about what i've",
             "images": ["http://placehold.it/300x200","http://placehold.it/300x200"]
             },
-    	],
-    	"display": "function taking no parameters"
+    	]
 };
 
 var education= {
 
         "schools": [
+
         {
          "name": "Facultad de ciencias Economicas y Empresariales",
          "location": "Sevilla",
          "degree": "Master",
          "majors": ["Bussines Administration"],
          "minors": ["Financial Accounting", "Audit"],
-         "dates": "2009",
+         "dates": 2009,
          "url": "www.us.es"
             },
         {
@@ -82,7 +91,7 @@ var education= {
          "location": "Sevilla",
          "degree": "Bachelor",
          "majors": ["Bussines Administration"],
-         "dates": "2006",
+         "dates": 2006,
          "url": "www.us.es"
             },
         {
@@ -90,7 +99,7 @@ var education= {
          "location": "Prague",
          "degree": "Erasmus",
          "majors": ["Bussines Administration", "English"],
-         "dates": "2006",
+         "dates": 2006,
          "url": "http://www.czu.cz/en/"
             }
         ],
@@ -100,25 +109,23 @@ var education= {
          {
             "title": "Introduction to Computer Science",
             "school": "MIT",
-            "date": "2013",
+            "date": 2013,
             "url": "www.edx.com"
             },
          {
             "title": "Front End Developer",
             "school": "Udacity",
-            "date": "integer (date finished)",
+            "date": 2015,
             "url": "www.udacity.com"
             }
-         ],
-    "display": "function taking no parameters"
-
+         ]
 };
 
 /* Avoid hacking function */
 
-function avoidHacking(some_string){
+function avoidHacking(data){
 
-	return some_string.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+	return data.toString().replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 /* Filling the content */
@@ -142,7 +149,6 @@ bio.display = function(){
         $("#header").prepend(formattedHeaderRole);
         var formattedHeaderName = HTMLheaderName.replace("%data%", avoidHacking(bio.name));
         $("#header").prepend(formattedHeaderName);
-        
         var formattedbioPic = HTMLbioPic.replace("%data%", avoidHacking(bio.biopic));
         $("#header").append(formattedbioPic);
         var formattedwelcomeMessage = HTMLwelcomeMsg.replace("%data%", avoidHacking(bio.welcomeMessage));

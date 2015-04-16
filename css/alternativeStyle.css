@@ -73,6 +73,11 @@ li:hover:nth-child(odd){
 	text-align: right;
 }
 
+.welcome-message p {
+
+	margin-top: 0;
+}
+
 .location-text{
 
 	margin-top: 15px;
@@ -146,8 +151,16 @@ li{
 
 		font-size: 20px;
 	}
-
 }
+
+@media screen and (max-width: 770px){
+
+	.project-entry img {
+
+		padding-top: 15px;
+	}
+}
+
 
 @media screen and (max-width: 470px){
 
