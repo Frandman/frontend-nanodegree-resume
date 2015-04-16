@@ -31,17 +31,24 @@ li{
 	padding: 5px;
 }
 
+#letsConnect h2{
+
+	font: 60px Monoton, sans-serif;
+	color: rgb(284, 84, 95);
+}
+
 li:hover:nth-child(even){
 
-	background-color: rgb(284, 84, 95);
+	background-color: rgba(284, 84, 95, 0.5);
 	transition: .5s ease;
 }
 
 li:hover:nth-child(odd){
 
-	background-color: #2991EA;
+	background-color: rgba(41, 145, 234,0.5);
 	transition: .5s ease;
 }
+
 
 .row:nth-child(odd){
 
@@ -56,12 +63,24 @@ li:hover:nth-child(odd){
 	padding: 10px;
 }
 
-#workExperience, #projects, #education, #no-border {
+
+#workExperience, #projects, #education, #no-border, #letsConnect {
 	border: none;
+	margin: 20px 0 20px 0 ;
 }
 .nameRole{
 	
 	text-align: right;
+}
+
+.location-text{
+
+	margin-top: 15px;
+}
+
+.workEntry p {
+
+margin-top: 0;
 }
 
 .container{
@@ -102,6 +121,19 @@ li{
 
 	padding-right: 0;
 }
+
+.gray-text {
+
+	color: #6C6C6C;
+	padding-left: 5px;
+}
+
+
+.blue-text {
+
+	color: #0B91F2;
+}
+
 @media screen and (max-width: 990px){
 
 	h1 {

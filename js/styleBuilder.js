@@ -18,6 +18,9 @@ $('#education, .education-entry, #education  h2, #education h3, .education-entry
 $('#mapDiv, #mapDiv h2, map').addClass('row');
 $('#letsConnect').addClass('row');
  $('h2.row, h3.row').attr('id', 'no-border');
+ $('span.white-text').addClass('gray-text').removeClass('white-text');
+ $('span.orange-text').addClass('blue-text').removeClass('orange-text');
+
 
 
 
