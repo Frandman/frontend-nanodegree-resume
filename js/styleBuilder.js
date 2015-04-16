@@ -1,10 +1,15 @@
 
 
+/* Adding Viewport*/
+
+$('body').prepend('<meta name="viewport" content="width=device-width, initial-scale=1.0"');
+
 /* Loading jQuery*/
 $('body').prepend('<script src"js/bootstrap.min.js"></script>');
 
 /* Load Google Fonts*/
 $('body').prepend('<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" >');
+
 
 /* Container*/
 $('#main').addClass('container');
