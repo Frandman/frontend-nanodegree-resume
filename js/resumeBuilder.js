@@ -59,15 +59,15 @@ var projects={
     	"projects": [
 
         {
-        	"title": "Interactive Resume",
+        	"title": "Css grid framework",
             "dates": 2015,
-            "description": "An awesome interactive resume that displays all relevant information about what i've",
+            "description": "A simple, but effective, self made framework",
             "images": ["http://placehold.it/300x200","http://placehold.it/300x200"]
         	},
         {
             "title": "Interactive Resume",
             "dates": 2015,
-            "description": "An awesome interactive resume that displays all relevant information about what i've",
+            "description": "An awesome interactive resume that displays all relevant information about what i've made",
             "images": ["http://placehold.it/300x200","http://placehold.it/300x200"]
             },
     	]
@@ -207,7 +207,6 @@ projects.display = function(){
             $(".project-entry:last").append(formattedprojectDates);
             var  formattedprojectDescription = HTMLprojectDescription.replace("%data%", avoidHacking(projects.projects[project].description));
             $(".project-entry:last").append(formattedprojectDescription);
-
             if (projects.projects[project].images.length > 0) {
                 for (image in projects.projects[project].images) {
                     var  formattedprojectImage = HTMLprojectImage.replace("%data%", avoidHacking(projects.projects[project].images[image]));
