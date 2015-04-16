@@ -64,9 +64,8 @@ li:hover:nth-child(odd){
 }
 
 
-#workExperience, #projects, #education, #no-border, #letsConnect {
+#projects, #education, #letsConnect {
 	border: none;
-	margin: 20px 0 20px 0 ;
 }
 .nameRole{
 	

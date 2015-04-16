@@ -17,30 +17,39 @@ $('.biopic, .welcome-message, #skillsH3, #skills').wrapAll('<div class="row"></d
 $('#name, #position').wrapAll('<div class="row nameRole"><div class="col-xs-12 col-sm-6 col-sm-offset-6 text-right"></div></div>');
 
 /* Adding row class*/
+var AddRowList = ['#projects',
+				 '.project-entry',
+				 '.work-entry',
+				 '#topContacts',
+				 '#mapDiv', 
+				 'map',
+				 '#letsConnect',
+				 '#education', 
+				 '.education-entry', 
+				 '.education-entry'];
 
-$('#projects, .project-entry, #workExperience  h2, .work-entry').addClass('row');
-$('#topContacts').addClass('row');
-$('#mapDiv, #mapDiv h2, map').addClass('row');
-$('#letsConnect').addClass('row');
-$('#education, .education-entry, #education  h2, #education h3, .education-entry').addClass('row');
+for (element in AddRowList) {
+
+	$(AddRowList[element]).addClass('row');
+}
 
 /* Columns */
 $('#topContacts li').addClass('col-xs-12 col-sm-4');
 $('.welcome-message, #skillsH3, #skills').wrapAll('<div class="col-xs-12 col-sm-6"></div>')
-$('.biopic').wrap('<div class="col-xs-12 col-sm-6"></div>');
-$('.project-entry img').wrap('<div class="col-xs-12 col-sm-6"></div>');
+$('.biopic, .project-entry img').wrap('<div class="col-xs-12 col-sm-6"></div>');
+
 
 /* Making all images responsive */
 $('img').addClass('img-responsive');
 
 /* Adding id's ir order to get rid of some borders*/
-$('h2.row, h3.row').attr('id', 'no-border');
+
 
 /* color classes dosn't make sense anymore, let's change it*/
 $('span.white-text').addClass('gray-text').removeClass('white-text');
 $('span.orange-text').addClass('blue-text').removeClass('orange-text');
 
-/* I don´t need the <hr>*/
+/* I don´t need the <hr> */
 $('hr').remove();
 
  /* Adding links to contacts */
