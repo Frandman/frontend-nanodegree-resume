@@ -9,6 +9,11 @@ a {
 	font-size: 20px;
 }
 
+a:hover{
+
+	text-decoration: none;
+}
+
 h1 {
 
 	font: 60px Monoton, sans-serif;
