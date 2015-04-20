@@ -39,7 +39,7 @@ for (element in AddRowList) {
 }
 
 /* Columns */
-$('#topContacts li').addClass('col-xs-12 col-sm-4');
+$('#topContacts li').addClass('col-xs-12 col-sm-6 col-md-4');
 $('.welcome-message, #skillsH3, #skills').wrapAll('<div class="col-xs-12 col-sm-6"></div>')
 $('.biopic, .project-entry img').wrap('<div class="col-xs-12 col-sm-6"></div>');
 
@@ -65,8 +65,37 @@ $('#topContacts li:nth-child(5) span:nth-child(2)').wrap('<a href="http://franjl
 $('#topContacts li:nth-child(6) span:nth-child(2)').wrap('<a href="https://www.google.es/maps/place/Madrid/"></a>');
 
 
+$( "#workExperience h2, #projects h2, #education h2").append('<button type="button" class="btn btn-default">Show</button>')
 
+$( "#workExperience button" ).click(function() {
+	$(".work-entry").toggle("fast");
+	if ($(this).text() == "Show"){
+		$(this).text("Hide");
+	}
+		else{
+			$(this).text("Show");
+		}	
+});
 
+$( "#projects button" ).click(function() {
+	$(".project-entry").toggle("fast");
+	if ($(this).text() == "Show") {
+		$(this).text("Hide");
+	}
+		else{
+			$(this).text("Show");
+		}
+});
+
+$( "#education button " ).click(function() {
+	$(".education-entry, #education h3").toggle("fast");
+	if ($(this).text() == "Show") {
+		$(this).text("Hide");
+	}
+		else{
+			$(this).text("Show");
+		}
+});
 
 
 
